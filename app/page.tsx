@@ -204,93 +204,120 @@ export default function NetflixPortfolio() {
   ]
 
   return (
-    <div className="min-h-screen bg-black text-white">
-      {/* Navigation */}
+    <div className="min-h-screen bg-black text-white font-sans">
       <nav
-        className={`fixed top-0 w-full z-50 transition-all duration-500 ${
-          isScrolled
-            ? "bg-black/95 backdrop-blur-sm shadow-lg"
-            : "bg-gradient-to-b from-black via-black/60 to-transparent"
+        className={`fixed top-0 w-full z-50 transition-all duration-300 ${
+          isScrolled ? "bg-[#141414]" : "bg-gradient-to-b from-black/90 via-black/70 to-transparent"
         }`}
       >
-        <div className="container mx-auto px-6 py-5 flex items-center justify-between">
-          <div className="flex items-center gap-10">
-            <h1 className="text-netflix-red text-4xl font-black tracking-tight hover:scale-105 transition-transform cursor-pointer">
+        <div className="container mx-auto px-4 md:px-8 py-4 md:py-5 flex items-center justify-between">
+          <div className="flex items-center gap-6 md:gap-12">
+            <h1 className="text-netflix-red text-2xl md:text-4xl font-black tracking-tight hover:scale-105 transition-transform cursor-pointer">
               SG
             </h1>
-            <div className="hidden md:flex gap-8 text-sm font-medium">
-              <a href="#about" className="hover:text-gray-300 transition-colors duration-200">
+            <div className="hidden lg:flex gap-6 text-sm font-medium">
+              <a
+                href="#about"
+                className="hover:text-gray-300 transition-colors duration-200 cursor-pointer font-semibold"
+              >
                 About
               </a>
-              <a href="#experience" className="hover:text-gray-300 transition-colors duration-200">
+              <a
+                href="#experience"
+                className="hover:text-gray-300 transition-colors duration-200 cursor-pointer font-semibold"
+              >
                 Experience
               </a>
-              <a href="#projects" className="hover:text-gray-300 transition-colors duration-200">
+              <a
+                href="#projects"
+                className="hover:text-gray-300 transition-colors duration-200 cursor-pointer font-semibold"
+              >
                 Projects
               </a>
-              <a href="#skills" className="hover:text-gray-300 transition-colors duration-200">
+              <a
+                href="#skills"
+                className="hover:text-gray-300 transition-colors duration-200 cursor-pointer font-semibold"
+              >
                 Skills
               </a>
             </div>
           </div>
-          <div className="flex gap-3">
+          <div className="flex gap-2 md:gap-3">
             <a href="mailto:Sahitya.gupta03@gmail.com" target="_blank" rel="noopener noreferrer">
-              <Button variant="ghost" size="icon" className="hover:bg-white/10 hover:text-netflix-red transition-all">
-                <Mail className="h-5 w-5" />
+              <Button
+                variant="ghost"
+                size="icon"
+                className="hover:bg-white/10 hover:text-netflix-red transition-all h-9 w-9 md:h-10 md:w-10"
+              >
+                <Mail className="h-4 w-4 md:h-5 md:w-5" />
               </Button>
             </a>
             <a href="https://linkedin.com/in/sahitya-gupta" target="_blank" rel="noopener noreferrer">
-              <Button variant="ghost" size="icon" className="hover:bg-white/10 hover:text-netflix-red transition-all">
-                <Linkedin className="h-5 w-5" />
+              <Button
+                variant="ghost"
+                size="icon"
+                className="hover:bg-white/10 hover:text-netflix-red transition-all h-9 w-9 md:h-10 md:w-10"
+              >
+                <Linkedin className="h-4 w-4 md:h-5 md:w-5" />
               </Button>
             </a>
             <a href="https://github.com/SahityaGupta" target="_blank" rel="noopener noreferrer">
-              <Button variant="ghost" size="icon" className="hover:bg-white/10 hover:text-netflix-red transition-all">
-                <Github className="h-5 w-5" />
+              <Button
+                variant="ghost"
+                size="icon"
+                className="hover:bg-white/10 hover:text-netflix-red transition-all h-9 w-9 md:h-10 md:w-10"
+              >
+                <Github className="h-4 w-4 md:h-5 md:w-5" />
               </Button>
             </a>
           </div>
         </div>
       </nav>
 
-      {/* Hero Section */}
-      <section id="about" className="relative h-screen flex items-center justify-center overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-black via-black/80 to-transparent z-10" />
-        <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-black/40 z-10" />
+      <section
+        id="about"
+        className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20 md:pt-24"
+      >
+        <div className="absolute inset-0 bg-gradient-to-r from-black via-black/95 to-black/70 z-10" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-black/60 z-10" />
         <div className="absolute inset-0 overflow-hidden">
-          <div className="absolute inset-0 bg-[url('/abstract-cloud-computing-infrastructure-servers-di.jpg')] bg-cover bg-center opacity-30 scale-110" />
+          <div className="absolute inset-0 bg-[url('/abstract-cloud-computing-infrastructure-servers-di.jpg')] bg-cover bg-center opacity-40 scale-110 animate-slow-zoom" />
         </div>
-        <div className="container mx-auto px-6 z-20 max-w-5xl">
-          <div className="space-y-8 animate-fade-in-up">
-            <Badge className="bg-netflix-red/90 text-white hover:bg-netflix-red px-4 py-1.5 text-sm font-semibold shadow-xl border-0">
-              Full-Stack Software Engineer
+        <div className="container mx-auto px-4 md:px-8 z-20 max-w-6xl py-12 md:py-0">
+          <div className="space-y-4 md:space-y-8 animate-fade-in-up">
+            <Badge className="bg-netflix-red text-white hover:bg-netflix-red px-4 py-2 md:px-6 md:py-2.5 text-sm md:text-base font-bold shadow-2xl border-0 inline-block">
+              FULL-STACK SOFTWARE ENGINEER
             </Badge>
-            <h1 className="text-7xl md:text-9xl font-black leading-none tracking-tighter text-balance drop-shadow-2xl">
-              SAHITYA GUPTA
+            <h1 className="text-5xl md:text-7xl lg:text-9xl font-black leading-none tracking-tighter text-balance drop-shadow-2xl">
+              SAHITYA
+              <br />
+              GUPTA
             </h1>
-            <p className="text-xl md:text-2xl text-gray-200 max-w-3xl leading-relaxed text-pretty font-light">
-              Building scalable cloud infrastructure and backend systems serving 1M+ users. Delivered $120K+ cost
-              savings and zero-downtime migrations.
+            <p className="text-base md:text-xl lg:text-2xl text-gray-100 max-w-3xl leading-relaxed text-pretty font-normal">
+              Building scalable cloud infrastructure and backend systems serving{" "}
+              <span className="text-white font-bold">1M+ users</span>. Delivered{" "}
+              <span className="text-white font-bold">$120K+ cost savings</span> and{" "}
+              <span className="text-white font-bold">zero-downtime migrations</span>.
             </p>
-            <div className="flex flex-wrap gap-5 pt-6">
+            <div className="flex flex-col sm:flex-row flex-wrap gap-3 md:gap-5 pt-4 md:pt-6">
               <Button
                 size="lg"
-                className="bg-white hover:bg-gray-200 text-black gap-2 px-8 py-6 text-base font-bold rounded-md shadow-2xl hover:scale-105 transition-all"
+                className="bg-white hover:bg-gray-200 text-black gap-2 px-6 py-5 md:px-8 md:py-6 text-sm md:text-base font-bold rounded shadow-2xl hover:scale-105 transition-all w-full sm:w-auto"
                 onClick={() => document.getElementById("projects")?.scrollIntoView({ behavior: "smooth" })}
               >
-                <Play className="h-6 w-6" fill="black" />
+                <Play className="h-5 w-5 md:h-6 md:w-6" fill="black" />
                 View Projects
               </Button>
               <Button
                 size="lg"
-                className="bg-gray-500/30 hover:bg-gray-500/50 backdrop-blur-sm text-white gap-2 px-8 py-6 text-base font-semibold rounded-md border border-white/30 hover:border-white/60 transition-all"
+                className="bg-gray-600/40 hover:bg-gray-600/60 backdrop-blur-sm text-white gap-2 px-6 py-5 md:px-8 md:py-6 text-sm md:text-base font-bold rounded transition-all w-full sm:w-auto"
                 onClick={() => document.getElementById("experience")?.scrollIntoView({ behavior: "smooth" })}
               >
-                <Info className="h-6 w-6" />
+                <Info className="h-5 w-5 md:h-6 md:w-6" />
                 More Info
               </Button>
             </div>
-            <div className="flex flex-wrap gap-8 pt-8">
+            <div className="grid grid-cols-2 md:flex md:flex-wrap gap-6 md:gap-8 pt-6 md:pt-8">
               {[
                 { value: "3+", label: "Years Experience" },
                 { value: "$110K+", label: "Cost Savings" },
@@ -298,74 +325,73 @@ export default function NetflixPortfolio() {
                 { value: "99.9%", label: "Uptime" },
               ].map((stat, idx) => (
                 <div key={idx} className="flex flex-col gap-1">
-                  <span className="text-4xl font-bold text-white">{stat.value}</span>
-                  <span className="text-sm text-gray-400 font-medium">{stat.label}</span>
+                  <span className="text-3xl md:text-4xl font-black text-white">{stat.value}</span>
+                  <span className="text-xs md:text-sm text-gray-300 font-semibold">{stat.label}</span>
                 </div>
               ))}
             </div>
           </div>
         </div>
-        <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-black to-transparent z-10" />
+        <div className="absolute bottom-0 left-0 right-0 h-24 md:h-32 bg-gradient-to-t from-black to-transparent z-10" />
       </section>
 
-      {/* Experience Section */}
-      <section id="experience" className="py-24 px-6 bg-black">
+      <section id="experience" className="py-12 md:py-20 px-4 md:px-8 bg-black">
         <div className="container mx-auto">
-          <div className="flex items-center justify-between mb-10">
-            <h2 className="text-4xl md:text-5xl font-bold text-white">Professional Experience</h2>
-            <div className="flex gap-2">
+          <div className="flex items-center justify-between mb-6 md:mb-10">
+            <h2 className="text-2xl md:text-4xl lg:text-5xl font-bold text-white">Professional Experience</h2>
+            <div className="hidden md:flex gap-2">
               <Button
                 variant="ghost"
                 size="icon"
                 onClick={() => scroll(experienceRef, "left")}
-                className="hover:bg-white/10 border border-white/20 hover:border-white/40 transition-all rounded-full w-10 h-10"
+                className="hover:bg-white/20 bg-black/50 border-2 border-white/30 hover:border-white/60 transition-all h-12 w-12"
               >
-                <ChevronLeft className="h-6 w-6" />
+                <ChevronLeft className="h-7 w-7" />
               </Button>
               <Button
                 variant="ghost"
                 size="icon"
                 onClick={() => scroll(experienceRef, "right")}
-                className="hover:bg-white/10 border border-white/20 hover:border-white/40 transition-all rounded-full w-10 h-10"
+                className="hover:bg-white/20 bg-black/50 border-2 border-white/30 hover:border-white/60 transition-all h-12 w-12"
               >
-                <ChevronRight className="h-6 w-6" />
+                <ChevronRight className="h-7 w-7" />
               </Button>
             </div>
           </div>
           <div
             ref={experienceRef}
-            className="flex gap-6 overflow-x-auto scrollbar-hide scroll-smooth pb-6 snap-x snap-mandatory"
+            className="flex gap-3 md:gap-4 overflow-x-auto scrollbar-hide scroll-smooth pb-6 snap-x snap-mandatory"
             style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
           >
             {experiences.map((exp, index) => (
               <Card
                 key={index}
-                className="flex-shrink-0 w-[420px] bg-netflix-gray/80 backdrop-blur-sm border-0 hover:bg-netflix-gray hover:scale-105 hover:shadow-2xl transition-all duration-300 cursor-pointer group snap-center rounded-lg overflow-hidden"
+                className="flex-shrink-0 w-[300px] md:w-[400px] lg:w-[420px] bg-[#181818] border-0 hover:bg-[#2a2a2a] hover:scale-105 hover:shadow-[0_0_40px_rgba(229,9,20,0.3)] transition-all duration-300 cursor-pointer group snap-center overflow-hidden"
                 onClick={() => setSelectedExperience(exp)}
               >
-                <div className="p-8 space-y-5 relative">
-                  <div className="absolute inset-0 bg-gradient-to-br from-netflix-red/0 group-hover:from-netflix-red/10 to-transparent transition-all duration-300" />
-                  <div className="space-y-3 relative z-10">
-                    <Badge className="bg-netflix-red/20 text-netflix-red border border-netflix-red/30 px-3 py-1">
+                <div className="p-6 md:p-8 space-y-4 md:space-y-5 relative">
+                  <div className="absolute inset-0 bg-gradient-to-br from-netflix-red/0 group-hover:from-netflix-red/5 to-transparent transition-all duration-300" />
+                  <div className="space-y-2 md:space-y-3 relative z-10">
+                    <Badge className="bg-netflix-red text-white border-0 px-3 py-1 text-xs font-bold">
                       {exp.company}
                     </Badge>
-                    <h3 className="text-2xl font-bold text-white group-hover:text-netflix-red transition-colors">
+                    <h3 className="text-xl md:text-2xl font-bold text-white group-hover:text-netflix-red transition-colors leading-tight">
                       {exp.title}
                     </h3>
-                    <p className="text-sm text-gray-400 font-medium">
+                    <p className="text-xs md:text-sm text-gray-400 font-semibold">
                       {exp.period} • {exp.location}
                     </p>
                   </div>
-                  <ul className="space-y-3 relative z-10">
+                  <ul className="space-y-2 md:space-y-3 relative z-10">
                     {exp.achievements.slice(0, 3).map((achievement, idx) => (
-                      <li key={idx} className="text-sm text-gray-300 flex gap-3 leading-relaxed">
-                        <span className="text-netflix-red text-lg">•</span>
+                      <li key={idx} className="text-xs md:text-sm text-gray-300 flex gap-2 md:gap-3 leading-relaxed">
+                        <span className="text-netflix-red text-base md:text-lg font-bold">•</span>
                         <span>{achievement}</span>
                       </li>
                     ))}
                   </ul>
-                  <div className="flex items-center gap-2 text-sm text-netflix-red font-semibold opacity-0 group-hover:opacity-100 transition-opacity relative z-10 pt-2">
-                    <span>View Full Details</span>
+                  <div className="flex items-center gap-2 text-xs md:text-sm text-netflix-red font-bold opacity-0 group-hover:opacity-100 transition-opacity relative z-10 pt-2">
+                    <span>Click for Details</span>
                     <ChevronRight className="h-4 w-4" />
                   </div>
                 </div>
@@ -375,75 +401,64 @@ export default function NetflixPortfolio() {
         </div>
       </section>
 
-      {/* Projects Section */}
-      <section id="projects" className="py-24 px-6 bg-zinc-950">
+      <section id="projects" className="py-12 md:py-20 px-4 md:px-8 bg-[#0a0a0a]">
         <div className="container mx-auto">
-          <div className="flex items-center justify-between mb-10">
-            <h2 className="text-4xl md:text-5xl font-bold text-white">Featured Projects</h2>
-            <div className="flex gap-2">
+          <div className="flex items-center justify-between mb-6 md:mb-10">
+            <h2 className="text-2xl md:text-4xl lg:text-5xl font-bold text-white">Featured Projects</h2>
+            <div className="hidden md:flex gap-2">
               <Button
                 variant="ghost"
                 size="icon"
                 onClick={() => scroll(projectsRef, "left")}
-                className="hover:bg-white/10 border border-white/20 hover:border-white/40 transition-all rounded-full w-10 h-10"
+                className="hover:bg-white/20 bg-black/50 border-2 border-white/30 hover:border-white/60 transition-all h-12 w-12"
               >
-                <ChevronLeft className="h-6 w-6" />
+                <ChevronLeft className="h-7 w-7" />
               </Button>
               <Button
                 variant="ghost"
                 size="icon"
                 onClick={() => scroll(projectsRef, "right")}
-                className="hover:bg-white/10 border border-white/20 hover:border-white/40 transition-all rounded-full w-10 h-10"
+                className="hover:bg-white/20 bg-black/50 border-2 border-white/30 hover:border-white/60 transition-all h-12 w-12"
               >
-                <ChevronRight className="h-6 w-6" />
+                <ChevronRight className="h-7 w-7" />
               </Button>
             </div>
           </div>
           <div
             ref={projectsRef}
-            className="flex gap-6 overflow-x-auto scrollbar-hide scroll-smooth pb-6 snap-x snap-mandatory"
+            className="flex gap-2 md:gap-3 overflow-x-auto scrollbar-hide scroll-smooth pb-6 snap-x snap-mandatory"
             style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
           >
             {projects.map((project, index) => (
               <Card
                 key={index}
-                className="flex-shrink-0 w-[380px] bg-netflix-gray/80 backdrop-blur-sm border-0 hover:scale-110 hover:shadow-2xl hover:z-10 transition-all duration-300 cursor-pointer group overflow-hidden snap-center rounded-md"
+                className="flex-shrink-0 w-[280px] md:w-[340px] lg:w-[380px] bg-[#181818] border-0 hover:scale-110 hover:shadow-[0_0_50px_rgba(229,9,20,0.4)] hover:z-10 transition-all duration-300 cursor-pointer group overflow-hidden snap-center"
                 onClick={() => setSelectedProject(project)}
               >
-                <div className="h-56 bg-black relative overflow-hidden">
+                <div className="aspect-video bg-black relative overflow-hidden">
                   <img
                     src={project.image || "/placeholder.svg"}
                     alt={project.title}
-                    className="w-full h-full object-cover opacity-60 group-hover:opacity-100 group-hover:scale-110 transition-all duration-500"
+                    className="w-full h-full object-cover opacity-70 group-hover:opacity-100 group-hover:scale-110 transition-all duration-500"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent" />
-                  <Badge className="absolute top-4 left-4 bg-netflix-red/90 text-white border-0 px-3 py-1 font-semibold">
+                  <div className="absolute inset-0 bg-gradient-to-t from-black via-black/30 to-transparent" />
+                  <Badge className="absolute top-3 left-3 md:top-4 md:left-4 bg-netflix-red text-white border-0 px-2 py-1 md:px-3 md:py-1 text-xs font-bold shadow-lg">
                     {project.category}
                   </Badge>
-                  <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity bg-black/60">
-                    <div className="rounded-full border-2 border-white p-4">
-                      <Play className="h-10 w-10 text-white" fill="white" />
+                  <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity bg-black/70">
+                    <div className="rounded-full border-3 border-white p-3 md:p-4 hover:bg-white/20 transition-colors">
+                      <Play className="h-8 w-8 md:h-10 md:w-10 text-white" fill="white" />
                     </div>
                   </div>
                 </div>
-                <div className="p-6 space-y-4 bg-netflix-gray/90 group-hover:bg-netflix-gray transition-colors">
-                  <h3 className="text-2xl font-bold text-white group-hover:text-netflix-red transition-colors leading-tight">
+                <div className="p-4 md:p-6 space-y-3 md:space-y-4 bg-[#181818] group-hover:bg-[#2a2a2a] transition-colors">
+                  <h3 className="text-lg md:text-xl lg:text-2xl font-bold text-white group-hover:text-netflix-red transition-colors leading-tight line-clamp-2">
                     {project.title}
                   </h3>
-                  <p className="text-sm text-gray-300 leading-relaxed line-clamp-2">{project.description}</p>
-                  <div className="flex items-center gap-2 py-2 px-3 bg-black/30 rounded-md border border-netflix-red/20">
-                    <span className="text-xs text-netflix-red font-bold uppercase tracking-wide">Impact:</span>
-                    <span className="text-sm text-white font-semibold">{project.impact}</span>
-                  </div>
-                  <div className="flex flex-wrap gap-2">
-                    {project.tech.slice(0, 4).map((tech, idx) => (
-                      <Badge
-                        key={idx}
-                        className="bg-white/10 hover:bg-white/20 text-white border-0 text-xs transition-colors"
-                      >
-                        {tech}
-                      </Badge>
-                    ))}
+                  <p className="text-xs md:text-sm text-gray-300 leading-relaxed line-clamp-2">{project.description}</p>
+                  <div className="flex items-center gap-2 py-2 px-3 bg-black/40 rounded border border-netflix-red/30">
+                    <span className="text-xs font-black text-netflix-red uppercase tracking-wide">KEY IMPACT</span>
+                    <span className="text-xs font-bold text-white">{project.impact}</span>
                   </div>
                 </div>
               </Card>
@@ -452,54 +467,31 @@ export default function NetflixPortfolio() {
         </div>
       </section>
 
-      {/* Skills Section */}
-      <section id="skills" className="py-24 px-6 bg-black">
+      <section id="skills" className="py-12 md:py-20 px-4 md:px-8 bg-black">
         <div className="container mx-auto">
-          <div className="flex items-center justify-between mb-10">
-            <h2 className="text-4xl md:text-5xl font-bold text-white">Technical Skills</h2>
-            <div className="flex gap-2">
-              <Button
-                variant="ghost"
-                size="icon"
-                onClick={() => scroll(skillsRef, "left")}
-                className="hover:bg-white/10 border border-white/20 hover:border-white/40 transition-all rounded-full w-10 h-10"
-              >
-                <ChevronLeft className="h-6 w-6" />
-              </Button>
-              <Button
-                variant="ghost"
-                size="icon"
-                onClick={() => scroll(skillsRef, "right")}
-                className="hover:bg-white/10 border border-white/20 hover:border-white/40 transition-all rounded-full w-10 h-10"
-              >
-                <ChevronRight className="h-6 w-6" />
-              </Button>
-            </div>
-          </div>
-          <div
-            ref={skillsRef}
-            className="flex gap-6 overflow-x-auto scrollbar-hide scroll-smooth pb-6 snap-x snap-mandatory"
-            style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
-          >
+          <h2 className="text-2xl md:text-4xl lg:text-5xl font-bold text-white mb-6 md:mb-12">Technical Skills</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
             {skillCategories.map((category, index) => (
               <Card
                 key={index}
-                className="flex-shrink-0 w-[340px] bg-netflix-gray/80 backdrop-blur-sm border-0 hover:bg-netflix-gray hover:scale-105 hover:shadow-2xl transition-all duration-300 snap-center rounded-lg"
+                className="bg-[#181818] border-0 hover:bg-[#2a2a2a] hover:scale-105 hover:shadow-[0_0_30px_rgba(229,9,20,0.2)] transition-all duration-300 group overflow-hidden"
               >
-                <div className="p-7 space-y-5">
-                  <div className="flex items-center gap-3">
-                    <div className="w-1 h-8 bg-netflix-red rounded-full" />
-                    <h3 className="text-xl font-bold text-white">{category.category}</h3>
-                  </div>
-                  <div className="flex flex-wrap gap-2">
-                    {category.skills.map((skill, idx) => (
-                      <Badge
-                        key={idx}
-                        className="bg-white/10 hover:bg-netflix-red hover:scale-105 text-white border border-white/20 hover:border-netflix-red transition-all cursor-default text-xs px-3 py-1.5"
-                      >
-                        {skill}
-                      </Badge>
-                    ))}
+                <div className="p-5 md:p-6 space-y-4 relative">
+                  <div className="absolute inset-0 bg-gradient-to-br from-netflix-red/0 group-hover:from-netflix-red/5 to-transparent transition-all duration-300" />
+                  <div className="relative z-10">
+                    <h3 className="text-lg md:text-xl font-bold text-white group-hover:text-netflix-red transition-colors mb-4">
+                      {category.category}
+                    </h3>
+                    <div className="flex flex-wrap gap-2">
+                      {category.skills.map((skill, idx) => (
+                        <Badge
+                          key={idx}
+                          className="bg-[#2a2a2a] hover:bg-netflix-red/90 text-white border border-white/10 hover:border-netflix-red transition-all px-3 py-1 text-xs font-semibold cursor-default"
+                        >
+                          {skill}
+                        </Badge>
+                      ))}
+                    </div>
                   </div>
                 </div>
               </Card>
@@ -508,111 +500,59 @@ export default function NetflixPortfolio() {
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="py-16 px-6 border-t border-white/10 bg-black">
-        <div className="container mx-auto">
-          <div className="flex flex-col md:flex-row items-center justify-between gap-8">
-            <div className="text-center md:text-left space-y-3">
-              <h3 className="text-3xl font-bold text-netflix-red">SAHITYA GUPTA</h3>
-              <p className="text-gray-400 text-sm max-w-md">
-                Full-Stack Software Engineer specializing in cloud infrastructure and scalable backend systems.
-              </p>
-            </div>
-            <div className="flex flex-col items-center md:items-end gap-4">
-              <div className="flex gap-3">
-                <a href="mailto:Sahitya.gupta03@gmail.com" target="_blank" rel="noopener noreferrer">
-                  <Button
-                    size="icon"
-                    className="bg-white/10 hover:bg-netflix-red hover:scale-110 transition-all border-0"
-                  >
-                    <Mail className="h-5 w-5" />
-                  </Button>
-                </a>
-                <a href="https://linkedin.com/in/sahitya-gupta" target="_blank" rel="noopener noreferrer">
-                  <Button
-                    size="icon"
-                    className="bg-white/10 hover:bg-netflix-red hover:scale-110 transition-all border-0"
-                  >
-                    <Linkedin className="h-5 w-5" />
-                  </Button>
-                </a>
-                <a href="https://github.com/SahityaGupta" target="_blank" rel="noopener noreferrer">
-                  <Button
-                    size="icon"
-                    className="bg-white/10 hover:bg-netflix-red hover:scale-110 transition-all border-0"
-                  >
-                    <Github className="h-5 w-5" />
-                  </Button>
-                </a>
-              </div>
-              <p className="text-gray-500 text-xs">© 2025 Sahitya Gupta. All rights reserved.</p>
-            </div>
-          </div>
-        </div>
-      </footer>
-
-      {/* Project Modal */}
       {selectedProject && (
         <div
-          className="fixed inset-0 bg-black/90 backdrop-blur-sm z-50 flex items-center justify-center p-6 animate-fade-in"
+          className="fixed inset-0 bg-black/95 backdrop-blur-sm z-50 flex items-start md:items-center justify-center p-0 md:p-6 overflow-y-auto animate-fade-in"
           onClick={() => setSelectedProject(null)}
         >
           <div
-            className="bg-netflix-gray rounded-lg max-w-5xl w-full max-h-[90vh] overflow-y-auto shadow-2xl animate-scale-in"
+            className="bg-[#181818] w-full md:max-w-4xl md:rounded-lg overflow-hidden shadow-2xl animate-scale-in min-h-screen md:min-h-0"
             onClick={(e) => e.stopPropagation()}
           >
-            <div className="relative h-80 overflow-hidden">
-              <img
-                src={selectedProject.image || "/placeholder.svg"}
-                alt={selectedProject.title}
-                className="w-full h-full object-cover"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-netflix-gray via-netflix-gray/60 to-transparent" />
-              <div className="absolute inset-0 bg-gradient-to-r from-black/60 to-transparent" />
-              <Button
-                variant="ghost"
-                size="icon"
-                className="absolute top-6 right-6 bg-black/50 hover:bg-black/80 backdrop-blur-sm rounded-full w-12 h-12 transition-all hover:scale-110"
-                onClick={() => setSelectedProject(null)}
-              >
-                <X className="h-6 w-6" />
-              </Button>
-              <div className="absolute bottom-8 left-8 space-y-3">
-                <Badge className="bg-netflix-red text-white border-0 px-4 py-1.5 font-semibold text-sm">
-                  {selectedProject.category}
-                </Badge>
-                <h2 className="text-5xl font-black text-white leading-tight drop-shadow-2xl">
-                  {selectedProject.title}
-                </h2>
+            <div className="relative">
+              <div className="aspect-video bg-black relative overflow-hidden">
+                <img
+                  src={selectedProject.image || "/placeholder.svg"}
+                  alt={selectedProject.title}
+                  className="w-full h-full object-cover opacity-60"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#181818] via-[#181818]/60 to-transparent" />
+                <button
+                  onClick={() => setSelectedProject(null)}
+                  className="absolute top-4 right-4 md:top-6 md:right-6 bg-black/80 hover:bg-black rounded-full p-2 md:p-3 hover:scale-110 transition-all z-10"
+                >
+                  <X className="h-5 w-5 md:h-6 md:w-6 text-white" />
+                </button>
+                <div className="absolute bottom-0 left-0 right-0 p-6 md:p-10">
+                  <Badge className="bg-netflix-red text-white border-0 px-3 py-1 text-xs md:text-sm font-bold mb-3 md:mb-4">
+                    {selectedProject.category}
+                  </Badge>
+                  <h2 className="text-3xl md:text-5xl font-black text-white mb-3 md:mb-4 leading-tight">
+                    {selectedProject.title}
+                  </h2>
+                  <p className="text-base md:text-xl text-gray-300 font-semibold max-w-3xl">{selectedProject.brief}</p>
+                </div>
               </div>
             </div>
 
-            <div className="p-10 space-y-8">
-              {/* Project Brief */}
-              <div className="flex items-start gap-8">
-                <div className="flex-1 space-y-4">
-                  <div>
-                    <h3 className="text-sm text-netflix-red font-bold uppercase tracking-wide mb-2">Project Brief</h3>
-                    <p className="text-lg text-gray-300 leading-relaxed">{selectedProject.brief}</p>
-                  </div>
-                  <div className="bg-green-950/30 border-l-4 border-green-500 p-5 rounded-r-lg">
-                    <p className="text-sm text-green-400 font-bold uppercase tracking-wide mb-1">Key Impact</p>
-                    <p className="text-2xl font-bold text-white font-mono">{selectedProject.impact}</p>
-                  </div>
-                </div>
+            <div className="p-6 md:p-10 space-y-6 md:space-y-8">
+              <div className="flex items-center gap-3 py-3 md:py-4 px-4 md:px-6 bg-gradient-to-r from-green-900/40 to-transparent border-l-4 border-green-500 rounded">
+                <span className="text-xs md:text-sm font-black text-green-400 uppercase tracking-wider">
+                  KEY IMPACT
+                </span>
+                <span className="text-lg md:text-2xl font-black text-white">{selectedProject.impact}</span>
               </div>
 
-              {/* Tech Stack */}
-              <div className="space-y-4">
-                <div className="flex items-center gap-3">
-                  <div className="w-1 h-6 bg-netflix-red rounded-full" />
-                  <h3 className="text-xl font-bold text-white uppercase tracking-wide">Tech Stack</h3>
+              <div>
+                <div className="flex items-center gap-3 mb-4 md:mb-5">
+                  <div className="w-1 h-6 bg-netflix-red" />
+                  <h3 className="text-lg md:text-xl font-bold text-white uppercase tracking-wide">Tech Stack</h3>
                 </div>
-                <div className="flex flex-wrap gap-3">
+                <div className="flex flex-wrap gap-2 md:gap-3">
                   {selectedProject.tech.map((tech, idx) => (
                     <Badge
                       key={idx}
-                      className="bg-white/10 hover:bg-netflix-red text-white border border-white/20 px-4 py-2 text-sm font-medium transition-all"
+                      className="bg-[#2a2a2a] hover:bg-[#3a3a3a] text-white border border-white/20 px-3 md:px-4 py-1.5 md:py-2 text-xs md:text-sm font-bold"
                     >
                       {tech}
                     </Badge>
@@ -620,17 +560,20 @@ export default function NetflixPortfolio() {
                 </div>
               </div>
 
-              {/* Architecture Highlights */}
-              <div className="space-y-4">
-                <div className="flex items-center gap-3">
-                  <div className="w-1 h-6 bg-netflix-red rounded-full" />
-                  <h3 className="text-xl font-bold text-white uppercase tracking-wide">Architecture Highlights</h3>
+              <div>
+                <div className="flex items-center gap-3 mb-4 md:mb-5">
+                  <div className="w-1 h-6 bg-netflix-red" />
+                  <h3 className="text-lg md:text-xl font-bold text-white uppercase tracking-wide">
+                    Architecture Highlights
+                  </h3>
                 </div>
-                <ul className="space-y-3">
+                <ul className="space-y-3 md:space-y-4">
                   {selectedProject.highlights.map((highlight, idx) => (
-                    <li key={idx} className="flex gap-4 text-gray-300">
-                      <span className="text-netflix-red text-xl font-bold">•</span>
-                      <span className="leading-relaxed">{highlight}</span>
+                    <li key={idx} className="flex gap-3 md:gap-4 items-start group">
+                      <span className="text-netflix-red text-xl md:text-2xl font-bold mt-1">•</span>
+                      <span className="text-sm md:text-base text-gray-300 leading-relaxed group-hover:text-white transition-colors">
+                        {highlight}
+                      </span>
                     </li>
                   ))}
                 </ul>
@@ -640,70 +583,64 @@ export default function NetflixPortfolio() {
         </div>
       )}
 
-      {/* Experience Modal */}
       {selectedExperience && (
         <div
-          className="fixed inset-0 bg-black/90 backdrop-blur-sm z-50 flex items-center justify-center p-6 animate-fade-in"
+          className="fixed inset-0 bg-black/95 backdrop-blur-sm z-50 flex items-start md:items-center justify-center p-0 md:p-6 overflow-y-auto animate-fade-in"
           onClick={() => setSelectedExperience(null)}
         >
           <div
-            className="bg-netflix-gray rounded-lg max-w-4xl w-full max-h-[90vh] overflow-y-auto shadow-2xl animate-scale-in"
+            className="bg-[#181818] w-full md:max-w-4xl md:rounded-lg overflow-hidden shadow-2xl animate-scale-in min-h-screen md:min-h-0"
             onClick={(e) => e.stopPropagation()}
           >
-            <div className="relative bg-gradient-to-br from-netflix-red/20 to-transparent p-10 border-b border-white/10">
-              <Button
-                variant="ghost"
-                size="icon"
-                className="absolute top-6 right-6 bg-black/50 hover:bg-black/80 backdrop-blur-sm rounded-full w-12 h-12 transition-all hover:scale-110"
+            <div className="relative bg-gradient-to-br from-[#1a1a1a] to-[#0a0a0a] p-6 md:p-10">
+              <button
                 onClick={() => setSelectedExperience(null)}
+                className="absolute top-4 right-4 md:top-6 md:right-6 bg-black/80 hover:bg-black rounded-full p-2 md:p-3 hover:scale-110 transition-all z-10"
               >
-                <X className="h-6 w-6" />
-              </Button>
-              <div className="space-y-4">
-                <Badge className="bg-netflix-red text-white border-0 px-4 py-1.5 font-semibold">
-                  {selectedExperience.company}
-                </Badge>
-                <h2 className="text-5xl font-black text-white leading-tight">{selectedExperience.title}</h2>
-                <p className="text-lg text-gray-300 font-medium">
-                  {selectedExperience.period} • {selectedExperience.location}
-                </p>
-              </div>
+                <X className="h-5 w-5 md:h-6 md:w-6 text-white" />
+              </button>
+              <Badge className="bg-netflix-red text-white border-0 px-3 py-1 text-xs md:text-sm font-bold mb-4">
+                {selectedExperience.company}
+              </Badge>
+              <h2 className="text-3xl md:text-5xl font-black text-white mb-3 md:mb-4 leading-tight">
+                {selectedExperience.title}
+              </h2>
+              <p className="text-base md:text-lg text-gray-400 font-bold">
+                {selectedExperience.period} • {selectedExperience.location}
+              </p>
+              <p className="text-base md:text-xl text-gray-300 mt-4 md:mt-6 leading-relaxed">
+                {selectedExperience.brief}
+              </p>
             </div>
 
-            <div className="p-10 space-y-8">
-              {/* Brief */}
+            <div className="p-6 md:p-10 space-y-6 md:space-y-8">
               <div>
-                <h3 className="text-sm text-netflix-red font-bold uppercase tracking-wide mb-3">Overview</h3>
-                <p className="text-lg text-gray-300 leading-relaxed">{selectedExperience.brief}</p>
-              </div>
-
-              {/* Achievements */}
-              <div className="space-y-4">
-                <div className="flex items-center gap-3">
-                  <div className="w-1 h-6 bg-netflix-red rounded-full" />
-                  <h3 className="text-xl font-bold text-white uppercase tracking-wide">Key Achievements</h3>
+                <div className="flex items-center gap-3 mb-4 md:mb-5">
+                  <div className="w-1 h-6 bg-netflix-red" />
+                  <h3 className="text-lg md:text-xl font-bold text-white uppercase tracking-wide">Key Achievements</h3>
                 </div>
-                <ul className="space-y-4">
+                <ul className="space-y-3 md:space-y-4">
                   {selectedExperience.achievements.map((achievement, idx) => (
-                    <li key={idx} className="flex gap-4 text-gray-300 bg-black/20 p-4 rounded-lg border border-white/5">
-                      <span className="text-netflix-red text-2xl font-bold flex-shrink-0">•</span>
-                      <span className="leading-relaxed text-base">{achievement}</span>
+                    <li key={idx} className="flex gap-3 md:gap-4 items-start group">
+                      <span className="text-netflix-red text-xl md:text-2xl font-bold mt-1">•</span>
+                      <span className="text-sm md:text-base text-gray-300 leading-relaxed group-hover:text-white transition-colors">
+                        {achievement}
+                      </span>
                     </li>
                   ))}
                 </ul>
               </div>
 
-              {/* Skills */}
-              <div className="space-y-4">
-                <div className="flex items-center gap-3">
-                  <div className="w-1 h-6 bg-netflix-red rounded-full" />
-                  <h3 className="text-xl font-bold text-white uppercase tracking-wide">Technologies Used</h3>
+              <div>
+                <div className="flex items-center gap-3 mb-4 md:mb-5">
+                  <div className="w-1 h-6 bg-netflix-red" />
+                  <h3 className="text-lg md:text-xl font-bold text-white uppercase tracking-wide">Technologies Used</h3>
                 </div>
-                <div className="flex flex-wrap gap-3">
+                <div className="flex flex-wrap gap-2 md:gap-3">
                   {selectedExperience.skills.map((skill, idx) => (
                     <Badge
                       key={idx}
-                      className="bg-white/10 hover:bg-netflix-red text-white border border-white/20 px-4 py-2 text-sm font-medium transition-all"
+                      className="bg-[#2a2a2a] hover:bg-[#3a3a3a] text-white border border-white/20 px-3 md:px-4 py-1.5 md:py-2 text-xs md:text-sm font-bold"
                     >
                       {skill}
                     </Badge>
